@@ -1,0 +1,65 @@
+\documentclass[11pt, A4paper, norsk]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{babel}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{textcomp}
+
+
+\definecolor{dkgreen}{rgb}{0, 0.6, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{daynineyellow}{rgb}{1.0, 0.655, 0.102}
+\definecolor{url}{rgb}{0.1, 0.1, 0.4}
+
+\lstset{frame=tb,
+	language=Python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{daynineyellow},
+	stringstyle=\color{dkgreen},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\lstset{inputpath="C:/Users/Torstein/Documents/USN/Faget!"}
+\graphicspath{{C:/Users/Torstein/Documents/USN/Faget!/}}
+\hypersetup{colorlinks, urlcolor=url}
+
+\author{Torstein Solheim Ølberg}
+\title{Specification for Assignment 4 in IIA1319}
+
+
+
+%\lstinputlisting{Filnavn! type kodefil}
+%\includegraphics[width=12.6cm, height=8cm]{Filnavn! type png}
+
+
+
+\begin{document}
+	\maketitle
+	\section{Background}
+For a long time, Hapro Electronics' automation team have slowly ramped up its use of 3D printers. A big problem with these printers is the long time they use per print and, because of their loud noise, the time it takes to go and check if they are in use or not. This problem would be solved by a webpage hosted on a server, that could take the status of the printers and display it to anyone who wanted to check it. Another problem is also that the printers often breaks down, so a display of this could also be useful.
+	
+	\section{User Interaction}
+The program needs to be available through the internet and be accessed from a computer. There, the user should be able to choose which printer to look at and check their status. The user should be able to choose to be notified, through email, when the printer is available and also to reserve a time for printing. Finally, if possible with the printers, it would be useful if the user could upload files directly to the software, so that the continued use of a single memory stick is no longer needed.
+	
+	\section{Data Flow}
+The program needs to take info from the printers and display it to the user. It also needs to take user input and save it to a list, which it can display to the user later. Furthermore, it should be able to give notifications back to the user with information when the printer is finished with the current task or a reserved list slot is ready. Finally, if possible with the printers, it should take g-code files and save them to a list. Then use these files to start a printer when it is give a signal that the printer has been cleared.
+	
+\end{document}
