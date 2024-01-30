@@ -1,5 +1,4 @@
-﻿using CsvHelper.Configuration.Attributes;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +29,7 @@ namespace SensorApp
 
 	public class Sensordata : IEnumerable<double>
     {
+        public string? Date {  get; set; }
 		public double _sensor_0 { get; set; }
         public double _sensor_1 { get; set; }
         public double _sensor_2 { get; set; }

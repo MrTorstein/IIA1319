@@ -36,14 +36,16 @@ namespace DAQ_Simulation_Application
 
         private void TakeSample()
         {
-            sensor_value_textbox.Text += DateTime.Now.ToString() + ": ";
+            DateTime time = DateTime.Now;
+            sensor_value_textbox.Text += time.ToString() + ": ";
             samples.Add(new Sensordata());
+            samples[^1].Date = time.ToString();
             for (int i = 0; i < sensors.Count; i++)
             {
                 samples[^1][i] = sensors[i].GetNewValue();
                 sensor_value_textbox.Text += samples[^1][i].ToString() + Environment.NewLine;
             }
-            next_sampling_time_textbox.Text = DateTime.Now.Add(min_sample_time).ToString();
+            next_sampling_time_textbox.Text = time.Add(min_sample_time).ToString();
         }
 
         private void LogSamples()
@@ -69,16 +71,13 @@ namespace DAQ_Simulation_Application
             Boolean appending = false;
             if (outfile_info.Exists)
             {
-                if (outfile_info.Length != 0)
-                {
-                    appending = true;
-                }
+                appending = true;
             }
 
             using (StreamWriter outfile = new(Path.Combine(path, filename), appending))
             {
                 foreach (Sensordata sample in samples)
-                    outfile.WriteLine("{0},{1},{2},{3},{4},{5}", sample[0], sample[1], sample[2], sample[3], sample[4], sample[5]);
+                    outfile.WriteLine("{0},{1},{2},{3},{4},{5},{6}", sample.Date, sample[0], sample[1], sample[2], sample[3], sample[4], sample[5]);
             }
 
             samples.Clear();
