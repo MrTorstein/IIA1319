@@ -170,5 +170,17 @@ namespace DAQ_Simulation_Application
                 log_once_button.Enabled = true;
             }
         }
+
+        private void HelpToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            string first_line = "This is a program generating a dataset and saving it to a csv file.\n";
+            string second_line = "You can either start a sampling session where a sample is collected\n";
+            string third_line = "every 3.4 seconds, or sample yourself. But sampling is not allowed more\n";
+            string fourth_line = "often than every 3.4 seconds.\nThe same goes for logging aswell, but";
+            string fifth_line = "with an interval of 47 seconds.\nYou can specify a name for the csv file";
+            string sixth_line = "to log to, or the program will \nuse the time of the logging as the name file.";
+            MessageBox.Show(first_line + second_line + third_line + fourth_line + fifth_line + sixth_line,
+                            "Help Page", MessageBoxButtons.OK);
+        }
     }
 }
