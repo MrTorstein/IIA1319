@@ -7,6 +7,9 @@ using SensorApp;
 
 namespace DAQ_Simulation_Application
 {
+    // Purpose: Controlling the programs behaviour
+    // Version: 30/01-24
+    // Author: Torstein Solheim Ølberg
     public partial class main_window : Form
     {
         readonly int sampling_time = 3400;
@@ -21,6 +24,9 @@ namespace DAQ_Simulation_Application
         Boolean logging_status = false;
 
 
+        // Purpose: Initialize class and GUI components
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         public main_window()
         {
             InitializeComponent();
@@ -34,6 +40,9 @@ namespace DAQ_Simulation_Application
             logging_timer.Interval = logging_time;
         }
 
+        // Purpose: Take one sample for each six sensors, save them and display them
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void TakeSample()
         {
             DateTime time = DateTime.Now;
@@ -48,6 +57,9 @@ namespace DAQ_Simulation_Application
             next_sampling_time_textbox.Text = time.Add(min_sample_time).ToString();
         }
 
+        // Purpose: Save samples gotten since last log time to a csv file
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void LogSamples()
         {
             string path = "../../../data/";
@@ -85,6 +97,9 @@ namespace DAQ_Simulation_Application
             next_logging_time_textbox.Text = DateTime.Now.Add(min_log_time).ToString();
         }
 
+        // Purpose: Activate or deactivate a sampling session when sampling button is clicked
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void SampleButtonClick(object sender, EventArgs e)
         {
             if (!sampling_status)
@@ -110,6 +125,9 @@ namespace DAQ_Simulation_Application
             }
         }
 
+        // Purpose: Activate or deactivate a logging session when logging button is clicked
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void LoggingButtonClick(object sender, EventArgs e)
         {
             if (!logging_status)
@@ -131,6 +149,9 @@ namespace DAQ_Simulation_Application
             }
         }
 
+        // Purpose: Sample sensors once and deactivate sampling until interval is passed
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void SampleOnceButtonClick(object sender, EventArgs e)
         {
             TakeSample();
@@ -138,6 +159,9 @@ namespace DAQ_Simulation_Application
             sample_once_button.Enabled = false;
         }
 
+        // Purpose: Log samples collected once and deactivate logging until interval is passed
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void LogOnceButtonClick(object sender, EventArgs e)
         {
             LogSamples();
@@ -145,6 +169,9 @@ namespace DAQ_Simulation_Application
             log_once_button.Enabled = false;
         }
 
+        // Purpose: Sample or reactivate sampling once when sampling interval has passed
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void SamplingTimerTick(object sender, EventArgs e)
         {
             if (sampling_status)
@@ -158,6 +185,9 @@ namespace DAQ_Simulation_Application
             }
         }
 
+        // Purpose: Log or reactivate logging once when sampling interval has passed
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void LoggingTimerTick(object sender, EventArgs e)
         {
             if (logging_status)
@@ -171,6 +201,9 @@ namespace DAQ_Simulation_Application
             }
         }
 
+        // Purpose: Display Help message when Help is clicked
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         private void HelpToolStripMenuItemClick(object sender, EventArgs e)
         {
             string first_line = "This is a program generating a dataset and saving it to a csv file.\n";

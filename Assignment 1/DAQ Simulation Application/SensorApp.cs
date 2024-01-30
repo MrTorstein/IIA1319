@@ -6,13 +6,18 @@ using System.Text;
 
 namespace SensorApp
 {
-	public class Sensor(int sensor_number)
+    // Purpose: Simulate a sensor which can give acumulating sensor values between -5 and 5
+    // Version: 29/01-24
+    // Author: Torstein Solheim Ølberg
+    public class Sensor(int sensor_number)
 	{
 		double value = 0.0F;
-		readonly int sensor = sensor_number;
 		readonly Random random_sensor_value = new(sensor_number);
 
-		public double GetNewValue()
+        // Purpose: Return a new accumulated value. Adds a random value between -5 and 5 to the last.
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
+        public double GetNewValue()
 		{
 			double min_value = -5F;
 			double max_value = 5F;
@@ -20,14 +25,12 @@ namespace SensorApp
 			value += random_sensor_value.NextDouble();
 			return ((max_value - min_value) * value) + min_value;
 		}
-
-		public int GetSensor()
-		{
-			return sensor;
-		}
 	}
 
-	public class Sensordata : IEnumerable<double>
+    // Purpose: Dataclass for storing sensor data of 6 sensors
+    // Version: 30/01-24
+    // Author: Torstein Solheim Ølberg
+    public class Sensordata : IEnumerable<double>
     {
         public string? Date {  get; set; }
 		public double _sensor_0 { get; set; }
@@ -37,6 +40,9 @@ namespace SensorApp
         public double _sensor_4 { get; set; }
         public double _sensor_5 { get; set; }
 
+        // Purpose: returning sensors values in order
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         public IEnumerator<double> GetEnumerator()
         {
             yield return _sensor_0;
@@ -47,12 +53,18 @@ namespace SensorApp
             yield return _sensor_5;
         }
 
+        // Purpose: Making the dataclass iterable
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
 
-		public double this[int index]
+        // Purpose: Making the data class indexable
+        // Version: 30/01-24
+        // Author: Torstein Solheim Ølberg
+        public double this[int index]
 		{
 			get
 			{

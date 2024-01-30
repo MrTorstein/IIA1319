@@ -44,10 +44,10 @@
             next_logging_time_textbox = new TextBox();
             next_sampling_time_textbox = new TextBox();
             sample_button = new Button();
-            menuStrip1 = new MenuStrip();
+            menu_strip = new MenuStrip();
             loggingToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            menu_strip.SuspendLayout();
             SuspendLayout();
             // 
             // sampling_timer
@@ -163,14 +163,14 @@
             sample_button.Text = "Start Sampling";
             sample_button.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // menu_strip
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { loggingToolStripMenuItem, helpToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 24;
-            menuStrip1.Text = "menuStrip1";
+            menu_strip.Items.AddRange(new ToolStripItem[] { loggingToolStripMenuItem, helpToolStripMenuItem });
+            menu_strip.Location = new Point(0, 0);
+            menu_strip.Name = "menu_strip";
+            menu_strip.Size = new Size(800, 24);
+            menu_strip.TabIndex = 24;
+            menu_strip.Text = "Menu Strip";
             // 
             // loggingToolStripMenuItem
             // 
@@ -202,13 +202,13 @@
             Controls.Add(next_logging_time_textbox);
             Controls.Add(next_sampling_time_textbox);
             Controls.Add(sample_button);
-            Controls.Add(menuStrip1);
+            Controls.Add(menu_strip);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MainMenuStrip = menuStrip1;
+            MainMenuStrip = menu_strip;
             Name = "main_window";
             Text = "DAQ Simulator";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            menu_strip.ResumeLayout(false);
+            menu_strip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,7 +228,7 @@
         private TextBox next_logging_time_textbox;
         private TextBox next_sampling_time_textbox;
         private Button sample_button;
-        private MenuStrip menuStrip1;
+        private MenuStrip menu_strip;
         private ToolStripMenuItem loggingToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
     }
