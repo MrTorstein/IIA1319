@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NtHjaYcv2gvb+rZezkkI5E00hrMPnM0LKRkfWUSdzcbGKBZwhAjMCQ70VGPk8u4P7RO5feYTiGEGjoH8DSH7Og==",
+  "dgSpecHash": "zKvPdQD5l3l4txXDzUqztmV4NVLaW1RNoG8MIv16sReKeGwZJv0jkj7V9qUPOVf0Ak7VbdoJYR9ALhJ4kw3Zvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Torstein\\Documents\\skole\\USN\\IIA1319\\Assignment 1\\DAQ Simulation Application\\DAQ Simulation Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Torstein\\.nuget\\packages\\csvhelper\\30.1.0\\csvhelper.30.1.0.nupkg.sha512",
+    "C:\\Users\\Torstein\\.nuget\\packages\\system.linq.async\\4.0.0\\system.linq.async.4.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
