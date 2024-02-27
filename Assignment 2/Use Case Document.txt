@@ -1,0 +1,31 @@
+1. Use Case Name: Control the input pumps.
+2. Scope: Buffer tank level control system.
+3. Level: User goal
+4. Primery Actor: Input pumps.
+5. Interests: Control system user and management of the plant.
+6. Preconditions: Prefered liquid level must be set to a value.
+7. Success Garantee: Input pumps setting changed to a new setting proportional to the output pumps setting and the relation between the current and prefered liquid level.
+8. Main Success Scenario:
+	1. Control system collects data on current liquid levels.
+    2. Control system request current pump settings
+    3. Pumps give current pump settings
+	4. Control system determins pumps new settings.
+	5. Control system sends adjusted input pumps settings.
+    6. Control system requests pumps new settings.
+    7. Pumps send new settings.
+9. Extension:
+	1A. Check displayed level if memory of level has been corrupted
+	2A. Reestablish connection to pumps if connection is broken.
+    3B. Request new pump settings if recieved settings are ouside of pumps capabilities
+	4A. Display a warning if input settings are already at max but current liquid level is sinking below prefered level.
+	4B. Display a warning if input settings are already at min but current liquid level is sinking above prefered level.
+	5A. Reestablish with pumps if pumps are no longer connected
+    7A. Reconnect with pump if a pump is not changing its setting to the one requested.
+	7B. Display warning if pump is not changing setting after reconnection.
+10. Special Requirements: 
+11. Technology and Data variation list: 
+12. Frequency of occurence:
+	Every time output pumps settings are changed
+	Every time an alarm goes off
+	Every ten minutes it hasen't been called
+13. Misc:

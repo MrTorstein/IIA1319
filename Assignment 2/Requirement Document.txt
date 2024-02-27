@@ -1,0 +1,37 @@
+Requirement Document:
+Create a control system that controlls a set of pumps and monitors another set of pumps
+
+Functional Requirements:
+Handles variation in time between input liquid and output liquid.
+	The buffertank is set up to help store liquid when production and usage is not in sync. The control system should regulate the input based on the output to control this behaviour.
+Controlls several pumps for input of liquid to a buffer tank.
+	The control system should be capable of controlling multiple pumps at the same 	time, and still know how much liquid is pumped into the tank.
+Monitors several pumps for output of liquid from the buffer tank
+	The system should be capable of monitoring multiple pumps at the same time, and sum the output of each pump together, as one output.
+Controlls a PV valve to change the gauge pressure.
+	The Control system must turn on or off a PV valve to hold the pressure of the tank at a controlled level
+Take in the wanted volum percent of the liquid in the tank.
+	The volum percent should be given in the percent of the ullage, not the percent of liquid.
+Displayed current liquid volum level in tank.
+	Current liquid volum should be given in terms of ullage and not percent of liquid.
+Display alarms.
+
+Usability Reqirements:
+No info on the type of UI is given, so a UI accessable by people without an education in the field of IT is needed.
+Alarmes are given as an indication.
+	Alarms set of should be displayed to the user but not interact with the system.
+
+Reliability Requirements:
+Warn when level is lower than 18.6 %
+	An alarm should be displayed to the user when liquid level is lower than 18.6 % or as displayed to the user, when the level is above 81.4 %.
+Warn when level is higher than 82.3 %
+	An alarm should be displayed to the user when liquid level is higher than 82.3 % or as displayed to the user, when the level is below 17.7 %.
+Gauge pressure must be kept at a level which the tank can sustain.
+	The control system must be capable of controlling the PV valve such that the gauge pressure doesn't raise above a level the tank can withstand.
+
+Performance Requirement:
+Control 6 input pumps
+Monitor 2 output pumps
+
+Supportability Requirements:
+No extra devices in the buffer tank system

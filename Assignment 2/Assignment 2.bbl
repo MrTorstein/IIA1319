@@ -1,0 +1,140 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{task}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e6c495d53ccf9607366a7daa891341c6}{%
+           family={Skeie},
+           familyi={S\bibinitperiod},
+           given={Nils-Olav},
+           giveni={N\bibinithyphendelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{fullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{bibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorbibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authornamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorfullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 24.02.2024)}
+      \field{title}{Software Analysis of a Control System}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://usn.instructure.com/courses/31275/files/3251101/download?wrap=1
+      \endverb
+      \verb{url}
+      \verb https://usn.instructure.com/courses/31275/files/3251101/download?wrap=1
+      \endverb
+    \endentry
+    \entry{task_params_app}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e6c495d53ccf9607366a7daa891341c6}{%
+           family={Skeie},
+           familyi={S\bibinitperiod},
+           given={Nils-Olav},
+           giveni={N\bibinithyphendelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{fullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{bibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorbibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authornamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorfullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 24.02.2024)}
+      \field{title}{SCE 1306 OOA of Control System Assignment}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://usn.instructure.com/courses/31275/files/3251043/download?wrap=1
+      \endverb
+      \verb{url}
+      \verb https://usn.instructure.com/courses/31275/files/3251043/download?wrap=1
+      \endverb
+    \endentry
+    \entry{lecture_notes}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e6c495d53ccf9607366a7daa891341c6}{%
+           family={Skeie},
+           familyi={S\bibinitperiod},
+           given={Nils-Olav},
+           giveni={N\bibinithyphendelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{fullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{bibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorbibnamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authornamehash}{e6c495d53ccf9607366a7daa891341c6}
+      \strng{authorfullhash}{e6c495d53ccf9607366a7daa891341c6}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 25.02.2024)}
+      \field{title}{Lecture notes for object-oriented analysis, design, and programming using UML and C\#}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://usn.instructure.com/courses/31275/files/3251492?wrap=1
+      \endverb
+      \verb{url}
+      \verb https://usn.instructure.com/courses/31275/files/3251492?wrap=1
+      \endverb
+    \endentry
+    \entry{github}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b23e733028587db1f881d7f7dcd453ae}{%
+           family={Olberg},
+           familyi={O\bibinitperiod},
+           given={Torstein\bibnamedelima Solheim},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b23e733028587db1f881d7f7dcd453ae}
+      \strng{fullhash}{b23e733028587db1f881d7f7dcd453ae}
+      \strng{bibnamehash}{b23e733028587db1f881d7f7dcd453ae}
+      \strng{authorbibnamehash}{b23e733028587db1f881d7f7dcd453ae}
+      \strng{authornamehash}{b23e733028587db1f881d7f7dcd453ae}
+      \strng{authorfullhash}{b23e733028587db1f881d7f7dcd453ae}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 27.02.2024)}
+      \field{title}{IIA1319/Assignment 2}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://github.com/MrTorstein/IIA1319/tree/main/Assignment%202
+      \endverb
+      \verb{url}
+      \verb https://github.com/MrTorstein/IIA1319/tree/main/Assignment%202
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
