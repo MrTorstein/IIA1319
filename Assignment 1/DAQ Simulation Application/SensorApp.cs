@@ -8,7 +8,7 @@ namespace SensorApp
 {
     // Purpose: Simulate a sensor which can give acumulating sensor values between -5 and 5
     // Version: 29/01-24
-    // Author: Torstein Solheim Ølberg
+    // Author: Torstein Solheim Olberg
     public class Sensor(int sensor_number)
 	{
 		double value = 0.0F;
@@ -16,7 +16,7 @@ namespace SensorApp
 
         // Purpose: Return a new accumulated value. Adds a random value between -5 and 5 to the last.
         // Version: 30/01-24
-        // Author: Torstein Solheim Ølberg
+        // Author: Torstein Solheim Olberg
         public double GetNewValue()
 		{
 			double min_value = -5F;
@@ -29,7 +29,7 @@ namespace SensorApp
 
     // Purpose: Dataclass for storing sensor data of 6 sensors
     // Version: 30/01-24
-    // Author: Torstein Solheim Ølberg
+    // Author: Torstein Solheim Olberg
     public class Sensordata : IEnumerable<double>
     {
         public string? Date {  get; set; }
@@ -42,7 +42,7 @@ namespace SensorApp
 
         // Purpose: returning sensors values in order
         // Version: 30/01-24
-        // Author: Torstein Solheim Ølberg
+        // Author: Torstein Solheim Olberg
         public IEnumerator<double> GetEnumerator()
         {
             yield return _sensor_0;
@@ -55,7 +55,7 @@ namespace SensorApp
 
         // Purpose: Making the dataclass iterable
         // Version: 30/01-24
-        // Author: Torstein Solheim Ølberg
+        // Author: Torstein Solheim Olberg
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
@@ -63,7 +63,7 @@ namespace SensorApp
 
         // Purpose: Making the data class indexable
         // Version: 30/01-24
-        // Author: Torstein Solheim Ølberg
+        // Author: Torstein Solheim Olberg
         public double this[int index]
 		{
 			get

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAQ Simulation Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78230c768e52c39028e6013f0adab21c2891155d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+716aeaa3d57afff31f51542b6bfd3d29b4c2497b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAQ Simulation Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAQ Simulation Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

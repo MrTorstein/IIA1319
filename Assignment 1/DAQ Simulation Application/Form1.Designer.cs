@@ -82,6 +82,7 @@
             log_once_button.TabIndex = 21;
             log_once_button.Text = "Log Once";
             log_once_button.UseVisualStyleBackColor = true;
+            log_once_button.Click += LogOnceButtonClick;
             // 
             // sample_once_button
             // 
@@ -91,6 +92,7 @@
             sample_once_button.TabIndex = 20;
             sample_once_button.Text = "Sample Once";
             sample_once_button.UseVisualStyleBackColor = true;
+            sample_once_button.Click += SampleOnceButtonClick;
             // 
             // sensor_value_label
             // 
@@ -127,6 +129,7 @@
             logging_button.TabIndex = 16;
             logging_button.Text = "Start Logging";
             logging_button.UseVisualStyleBackColor = true;
+            logging_button.Click += LoggingButtonClick;
             // 
             // sensor_value_textbox
             // 
@@ -162,6 +165,7 @@
             sample_button.TabIndex = 12;
             sample_button.Text = "Start Sampling";
             sample_button.UseVisualStyleBackColor = true;
+            sample_button.Click += SampleButtonClick;
             // 
             // menu_strip
             // 
