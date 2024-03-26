@@ -66,7 +66,8 @@ In this article an analysis of the project, using the Elaboration and Constructi
 
 	\section{Results}
 		\subsection{Requirements}
-The requirement document, found at the GitHub repository of the project \cite{github} or Appendix A in this article, contains a list of the requirements for the buffer tank control system. It follows the FURPS+ pattern and outlines both the functional and non-functional requirements. In short, it states that the control system needs to be able to control a set of input pumps and monitor the activities of a set of output pumps. It also needs to interact with a used, getting a desired level for the amount of liquid in the tank, and displaying alarms to the user. The document also outlines in what events the control system needs to output alarms, how to output them, and that it needs to control a safety PV valve to not risk to high pressure. Finally, it outlines the number of input and output pumps it needs to control and that there can't be any more devices in the buffer tank system than those specified in the specification.
+The requirement document, found at the GitHub repository of the project \cite{github} and underneath this paragraph, contains a list of the requirements for the buffer tank control system. It follows the FURPS+ pattern and outlines both the functional and non-functional requirements. In short, it states that the control system needs to be able to control a set of input pumps and monitor the activities of a set of output pumps. It also needs to interact with a used, getting a desired level for the amount of liquid in the tank, and displaying alarms to the user. The document also outlines in what events the control system needs to output alarms, how to output them, and that it needs to control a safety PV valve to not risk to high pressure. Finally, it outlines the number of input and output pumps it needs to control and that there can't be any more devices in the buffer tank system than those specified in the specification. \\
+\lstinputlisting{Requirement Document.txt}
 
 		\subsection{Use Case Diagram}
 The use case diagram, which can also be found at the GitHub repository \cite{github}, is a graphical representation of the functional requirements, with the system and its use cases linked with the different actors it needs to interact with. These actors are the user of the control system, the input pumps and the output pumps, and the PV valve. The use cases for the system, represented in the use case diagram, are controlling the input pumps, handle variations in time of the input and output, monitoring the output pumps, control the PV valve, set ideal liquid value, display current liquid value and display alarms.
@@ -87,8 +88,9 @@ A domain model was created from the specification, and can also be found at the 
 The diagram displays all the items specified in the specification, and also how they interact with each other. The control system and the buffer tank are particularly involved, with a lot of other items interacting or being linked to them. Some of the items also have multiplicity markings displaying if there are one or multiple of them present in the system.
 
 		\subsection{Fully Dressed Use Case Document of the Most Important Use Case}
-The FDUCD can also be found at the GitHub and in Appendix B, and it outlines the full interaction between the input pumps and the control system when the control system controls the input pumps. This use case was chosen as the most important use case since it is directly responsible for the function of the system. With only this use case, and some preset configuration of the system, the system would be able to work. \\
-The document mainly describes the normal scenario of the use case. This is the control system getting data from the pumps and itself, using that data to calculate a new input pump setting and sending that info to the input pumps. It also describes the different alternate routes which can be taken if any errors occur, like the lose of connection between pumps and control system, or the pumps extrema settings being inadequate in dealing with the current situation. 
+The FDUCD, found under this paragraph, outlines the full interaction between the input pumps and the control system when the control system controls the input pumps. This use case was chosen as the most important use case since it is directly responsible for the function of the system. With only this use case, and some preset configuration of the system, the system would be able to work. \\
+The document mainly describes the normal scenario of the use case. This is the control system getting data from the pumps and itself, using that data to calculate a new input pump setting and sending that info to the input pumps. It also describes the different alternate routes which can be taken if any errors occur, like the lose of connection between pumps and control system, or the pumps extrema settings being inadequate in dealing with the current situation. \\
+\lstinputlisting{Use Case Document.txt}
 		
 		\subsection{System Sequence Diagram of the FDUCD}
 The system sequence diagram, found at the GitHub repository and also in figure \ref{im:SSD}, displays the time order of the FDUCD in a graphical way. The diagram includes two actors and one object, where the actors are the two types of pumps and the object is the control system. The sequence then starts with handling the collection of data, follows up with the calculation of new pump settings, and finishes with the transfer of the new settings and the check that these new settings where implemented correctly. The whole sequence is encapsulated in a loop, which indicates it is performed again and again.
@@ -111,19 +113,13 @@ For later parts of the project, when testing the developed software, it is impor
 
 			\subsubsection{Remaining time of the project}
 Since the rest of the steps for finishing the project have been outlined, and the Elaboration phase has been finished, it is useful to estimate the time it would take for a finished project. This would be very useful when determining if the project is to continue to the next phase and also when the project can be expected to be finished. \\
-The only information it is possible to use for this estimate is the size of the project and the availability of the team responsible for developing the control system. As this development is likely to fall to the team consisting only of the author of this project, it is possible to make this estimate. Firstly, based on experience with the chosen teams earlier development time for similar systems, and the limited availability in the coming months, this development should at least take a week per use case. Summing the 7 use cases, outlined in the use case diagram, together and adding some time for the finale Transition phase the total time ends up at around 8 weeks. Adding some time for unexpected problems, the project is most likely going to take a little over to months to finish.
+Using the information available to us for this estimate, the size of the project and the availability of the team responsible for developing the control system, it is possible to make this. As this development is likely to fall to the team consisting only of the author of this project, a team size of one is assumed. Firstly, based on experience with the chosen teams earlier development time for similar systems, and the limited availability in the coming months, this development should at least take a week per use case. Summing the 7 remaining use cases, outlined in the use case diagram, together and adding equally as much time for the finale Transition phase the total time ends up at 8 weeks. Adding some time for unexpected problems, the remaining time of the project is two months.
 
 	\section{Conclusion}
 In the article, the project of developing a control system for a buffer tank has been outlined. The steps in the Elaboration phase and the first steps in a single iteration of the construction phase, of the UP, have been performed, and the results are a set of documentations and resources useful for later steps in the process. Finally, some speculation on the next steps in the project, the use case driven iterative part of the UP, and the time it will take to perform these steps have been presented. Based on this time, the project will be finished in about two months.
 
+\clearpage
+
 \printbibliography
-
-	\section{Appendix A}
-The requirement document:
-\lstinputlisting{Requirement Document.txt}
-
-	\section{Appendix B}
-The fully dressed use case document:
-\lstinputlisting{Use Case Document.txt}
 
 \end{document}
